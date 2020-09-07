@@ -7,7 +7,7 @@ from emenu.models import Menu
 class MenuFactory(DjangoModelFactory):
 
     name = Faker("name")
-    description = Faker("description")
+    description = Faker("text")
 
     class Meta:
         model = Menu

@@ -1,0 +1,99 @@
+- model: emenu.menu
+  pk: 1
+  fields:
+    name: Osteria Francescana
+    description: The restaurant of chef Massimo Bottura (who topped the bestseller lists with his book Never Trust a Skinny Chef) in Modena, Italy celebrates the bounty of Emilia-Romagna, his home province in the northern part of the country. Yet Bottura’s take on Italian cuisine is hardly traditional, exploring the ingredients and traditions of the region by giving them a contemporary twist. Along with such classic Italian fare as tagliatelle and risotto cooked with veal jus, Bottura also presents such off-the-wall dishes as rabbit macaroons and his Five Ages of Parmigiano Reggiano, in which iconic cheese is served in five wildly differing textures, depending on their age, ranging from a crispy galette to a frothy Parmesan foam.
+    created_on: 2020-09-07 17:44:39.319107+00:00
+    modified_on: 2020-09-07 17:44:39.321681+00:00
+- model: emenu.menu
+  pk: 2
+  fields:
+    name: Eleven Madison Park
+    description: The menu of this world-class Manhattan restaurant is distinctly American, as seen through the creative filter of chef Daniel Humm. The restaurant is renowned for its multi-course tasting menu, which changes based on the availability of fresh, seasonal local ingredients and guided by the culinary traditions of New York City and the agricultural offerings of the region. Dining at Eleven Madison Park is an event, and enjoying the full 11-course tasting menu will take upwards of three hours as diners sample such exquisite dishes as Muscovy duck glazed with lavender honey and foie gras terrine served with plums, umeboshi and bitter almonds.
+    created_on: 2020-09-07 17:44:39.319107+00:00
+    modified_on: 2020-09-07 17:44:39.321681+00:00
+- model: emenu.menu
+  pk: 3
+  fields:
+    name: Noma
+    description: The original Noma was, undoubtedly, one of the most important restaurants of its generation. With his food, René Redzepi developed a new genre of cuisine. New Nordic cookery looks back to look ahead; digging deeper than seasonality to explore unsung foraged products, while seamlessly weaving in a study of fermentation. Redzepi’s visionary approach to celebrating terroir via ingredient-focused, minimalist plates earned the first incarnation of Noma the title of The World’s Best Restaurant in four years 2010, 2011, 2012, and 2014.
+    created_on: 2020-09-07 17:44:39.319107+00:00
+    modified_on: 2020-09-07 17:44:39.321681+00:00
+- model: emenu.menu
+  pk: 4
+  fields:
+    name: Alinea
+    description: Founded by chef Grant Achatz in 2005, Alinea quickly rocketed to the top of Chicago’s food scene due to Achatz’s unique food preparation and deconstruction of iconic dishes, renowned for his brave and unconventional approach to fine dining. Alinea remains on the cutting edge of the molecular gastronomy movement, with the intention of both shocking and delighting guests with dishes such as an edible balloon made from a dehydrated apple filled with helium, or a truffle-topped ravioli filled with truffle broth that explodes with flavour in one’s mouth.
+    created_on: 2020-09-07 17:44:39.319107+00:00
+    modified_on: 2020-09-07 17:44:39.321681+00:00
+- model: emenu.dish
+  pk: 1
+  fields:
+    name: Gaspacho
+    description: cold tomato soup
+    price: '10.00'
+    prep_time: 10
+    is_vegetarian: true
+    menu: 1
+    created_on: 2020-09-07 17:44:39.319107+00:00
+    modified_on: 2020-09-07 17:44:39.321681+00:00
+- model: emenu.dish
+  pk: 2
+  fields:
+    name: lobster
+    description: lobster with lemon greass
+    price: '150.00'
+    prep_time: 12
+    is_vegetarian: true
+    image: ''
+    menu: 2
+    created_on: 2020-09-07 17:44:39.319107+00:00
+    modified_on: 2020-09-07 17:44:39.321681+00:00
+- model: emenu.dish
+  pk: 3
+  fields:
+    name: Turbot in zuccini shell
+    description: Turbot sous vide in zuccini shell
+    price: '200.00'
+    prep_time: 9
+    is_vegetarian: true
+    image: ''
+    menu: 2
+    created_on: 2020-09-07 17:44:39.319107+00:00
+    modified_on: 2020-09-07 17:44:39.321681+00:00
+- model: emenu.dish
+  pk: 4
+  fields:
+    name: Buttered popcorn
+    description: Corn -- the workhorse of the industrial world -- is best when its sweet variety is fried up with lashings of butter till it bursts and then snarfed in greasy fistfuls while watching Netflix late at night.
+    price: '10.00'
+    prep_time: 2
+    is_vegetarian: true
+    image: ''
+    menu: 3
+    created_on: 2020-09-07 17:44:39.319107+00:00
+    modified_on: 2020-09-07 17:44:39.321681+00:00
+- model: emenu.dish
+  pk: 5
+  fields:
+    name: Seafood paella
+    description: The sea is lapping just by your feet, a warm breeze whips the tablecloth around your legs and a steamy pan of paella sits in front of you. Shrimp, lobster, mussels and cuttlefish combine with white rice and various herbs, oil and salt in this Valencian dish to send you immediately into holiday mode. Though if you have it in Spain, you're probably there already.
+    price: '10.00'
+    prep_time: 2
+    is_vegetarian: true
+    image: ''
+    menu: 4
+    created_on: 2020-09-07 17:44:39.319107+00:00
+    modified_on: 2020-09-07 17:44:39.321681+00:00
+- model: emenu.dish
+  pk: 6
+  fields:
+    name: Stinky tofu
+    description: Nothing really prepares you for the stench of one of the strangest dishes on earth. Like durian, smelly tofu is one of Southeast Asia's most iconic foods. The odor of fermenting tofu is so overpowering many aren't able to shake off the memory for months. So is the legendarily divine taste really worth the effort? Sure it is.
+    price: '10.00'
+    prep_time: 2
+    is_vegetarian: true
+    image: ''
+    menu: 4
+    created_on: 2020-09-07 17:44:39.319107+00:00
+    modified_on: 2020-09-07 17:44:39.321681+00:00

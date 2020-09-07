@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}Menu List{% endblock %}
+
+{% block content %}
+  <h1>Menu List</h1>
+  {% if menu_list %}
+  <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+      <thead>
+          <tr>
+              <th class="th-sm">#</th>
+              <th class="th-sm">{% trans "Name" %}</th>
+              <th class="th-sm">{% trans "Dish amount" %}</th>
+              <th class="th-sm">-</th>
+          </tr>
+      </thead>
+      <tbody>
+        {% for menu in menu_list %}
+        <tr>
+            <th scope="row">{{ menu.id }}</td>
+            <td>{{ menu.name }}</td>
+            <td>{{ menu.dish_amount }}</td>
+            <td>
+                <a href="{% url 'menu:detail' menu.id %}"><i class="fas fa-list" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  {% else %}
+    <p>There are no menu cards.</p>
+  {% endif %}
+
+{% endblock content %}

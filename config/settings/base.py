@@ -1,15 +1,27 @@
 from pathlib import Path
 
+import environ
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 APPS_DIR = BASE_DIR / "emenu"
 
 
+env = environ.Env()
+
+READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
+
+if READ_DOT_ENV_FILE:
+    # OS environment variables take precedence over variables from .env
+    env.read_env(str(BASE_DIR / ".env"))
+
+# GENERAL
+# ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#debug
+DEBUG = env.bool("DJANGO_DEBUG", False)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "eqnzs)t5m@g(m2)ozupw0wzb8vll8r(d97o=1pvajgjxm0w04q"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -66,9 +78,9 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "emenu",
-        "USER": "postgres",
-        "PASSWORD": "password",
+        "NAME": "",
+        "USER": "",
+        "PASSWORD": "",
         "PORT": "5432",
         "HOST": "127.0.0.1",
         "ATOMIC_REQUESTS": True,
